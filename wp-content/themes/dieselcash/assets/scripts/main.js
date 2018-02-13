@@ -74,4 +74,68 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+  // Slider
+  $(".team-slider").slick({
+      infinite: true,
+      dots: true,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+  });
+  // Slider
+  $(".client-slider").slick({
+      infinite: true,
+      dots: false,
+      arrows: true,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll:2
+          }
+        }
+      ]
+  });
+  //Scroll
+  $("#myMenu a[href^='#']").on('click', function(e) {
+
+     // prevent default anchor click behavior
+     e.preventDefault();
+
+     // store hash
+     var hash = this.hash;
+
+     // animate
+     $('html, body').animate({
+         scrollTop: $(hash).offset().top
+       }, 300, function(){
+
+         // when done, add hash to url
+         // (default click behaviour)
+         window.location.hash = hash;
+       });
+  });
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    var offset = $(document).scrollTop();
+    if (offset >= 1) {
+      $("#header").addClass("fixed-top");
+    } else {
+      $("#header").removeClass("fixed-top");
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
 })(jQuery); // Fully reference jQuery after this point.

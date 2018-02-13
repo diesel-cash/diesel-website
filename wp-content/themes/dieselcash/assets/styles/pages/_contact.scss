@@ -1,0 +1,52 @@
+#contact{
+	.title{
+		padding-top: 80px;
+	}
+	.contact{
+		padding-bottom: 80px;
+		background-image: url(../../assets/images/home_bg_intro.png);
+		background-position: center;
+	}
+	.content-contact{
+		.left{
+			background-color: rgba(30, 28, 79, 0.7);
+		    padding: 30px;
+		    border-radius: 10px;
+		}
+		form{
+			input[type=text],input[type=email],textarea{
+				width: 100%;
+			    border: 2px solid #fff;
+			    border-radius: 5px;
+			    padding: 8px 15px;
+			    &:focus{
+			    	border-color : $theme-color;
+			    	outline: none;
+			    }
+			}
+			textarea{
+			    height: 150px;	
+			}
+			input[type=submit]{
+				width: 100%;
+				padding: 8px 15px;
+				border-radius: 5px;
+				background-color:  $theme-color;
+    			border: none;    
+    			box-shadow: inset 0 0 0 1px rgba(0,0,0,.03);
+			    background-repeat: repeat-x;
+			    background-image: url(../../assets/images/shadow_button.png);
+			}
+		}
+	}
+}
+@media only screen and (max-width: 991px){
+	#contact{
+		.title{
+			padding-top: 60px;
+		}
+		.contact{
+			padding-bottom: 60px;
+		}
+	}
+}

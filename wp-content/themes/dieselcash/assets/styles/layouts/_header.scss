@@ -1,0 +1,102 @@
+#header{
+	position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px 0;   
+    background-color: transparent;
+    transition: .8s;
+    -webkit-transition: .8s;
+    .logo-fixed{
+        width: 0;
+    }
+    .logo{
+        width: auto;
+    }
+    &.fixed-top{
+    	position: fixed;
+    	background-color: $bg-color-main;
+        .logo-fixed{
+            width: auto;
+        }
+        .logo{
+            width: 0;
+        }
+    }
+    ul.navbar-nav{
+    	li.nav-item{
+    		a.nav-link{
+    			position: relative;
+    			padding: 0 20px 10px;    
+    			font-size: small;
+    			letter-spacing: 1px;
+    			&:after{
+    				content : '';
+    				height: 0;
+    				position: absolute;
+	    			left: 10%;
+					top: 50%;
+					margin-top: 10px;
+					width: 80%;
+					transition: .3s;
+    				-webkit-transition: .3s;
+	    		}
+	    		&.active{
+	    			&:after{
+	    				background: $theme-color;
+	    				height: 2px;
+	    			}
+	    		}
+    		}
+    	}
+    }
+    button.navbar-toggle{
+        width: 45px;
+        height: 32px;
+        background-image: url(../../assets/images/menu.png);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: absolute;
+        right: 15px;
+        cursor: pointer;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+@media only screen and (min-width: 768px){
+    #header{
+        #navbar{
+            display: block;
+        }
+    }
+}
+@media only screen and (max-width: 767px){
+    #header{
+        background-color: $bg-color-main;
+        .logo{
+            width: 0;
+        }
+        .logo-fixed{
+            width: auto;
+        }
+        #navbar{
+            ul.navbar-nav{
+                width: 100%;
+                li.nav-item a.nav-link{
+                    padding: 10px 0;
+                    font-size: unset;
+                    display: inline-block;
+                    &:after{
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
