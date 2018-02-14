@@ -1,7 +1,7 @@
 <header id="header" class="banner">
   <div class="container">
     <div class="row justify-content-between align-items-center">
-      <div class="col-lg-4 col-md-5">
+      <div class="left col-lg-4 col-md-5">
         <a class="brand" href="<?= esc_url(home_url('/')); ?>">
           <?php //bloginfo('name'); ?>
           <img class="logo" src="<?= build_url('/assets/images/logo.png')?>"/>
