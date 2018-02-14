@@ -51,6 +51,9 @@
     		}
     	}
     }
+    .left{
+       position: relative; 
+    }
     button.navbar-toggle{
         width: 45px;
         height: 32px;
@@ -62,7 +65,9 @@
         padding: 0;
         position: absolute;
         right: 15px;
+        top: 50%;
         cursor: pointer;
+        transform: translateY(-50%);
         &:focus{
             outline: none;
         }
