@@ -9,19 +9,19 @@
     transition: .8s;
     -webkit-transition: .8s;
     .logo-fixed{
-        width: 0;
+        display: none;
     }
     .logo{
-        width: auto;
+        display: block;
     }
     &.fixed-top{
     	position: fixed;
     	background-color: $bg-color-main;
         .logo-fixed{
-            width: auto;
+            display: block;
         }
         .logo{
-            width: 0;
+            display: none;
         }
     }
     ul.navbar-nav{
@@ -79,10 +79,10 @@
     #header{
         background-color: $bg-color-main;
         .logo{
-            width: 0;
+            display: none;
         }
         .logo-fixed{
-            width: auto;
+            display: block;
         }
         #navbar{
             ul.navbar-nav{

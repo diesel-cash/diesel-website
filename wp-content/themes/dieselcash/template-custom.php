@@ -5,6 +5,12 @@
 ?>
 
 <?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
+	<section id="home" class="background-fixed">
+		<div class="intro background-fixed">
+			<div class="container">
+			  	<?php // get_template_part('templates/page', 'header'); ?>
+			  	<?php get_template_part('templates/content', 'page'); ?>
+		  	</div>
+	  	</div>
+  	</section>
 <?php endwhile; ?>

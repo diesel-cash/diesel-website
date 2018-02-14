@@ -1,4 +1,4 @@
-body{
+body.page{
 	background-color: $bg-color-main;
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
@@ -30,6 +30,14 @@ h6{
     font-size: 14px;
     line-height: 25px;
     font-weight: 400;
+}
+.page-template-template-custom{
+	.intro{
+	    padding-bottom: 40px;
+	}
+}
+.background-fixed{
+	background-attachment: fixed;
 }
 .theme-color{
 	color: $theme-color;
