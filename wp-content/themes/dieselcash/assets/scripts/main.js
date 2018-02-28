@@ -87,8 +87,8 @@
       infinite: true,
       dots: false,
       arrows: true,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 5,
+      slidesToScroll: 5,
       responsive: [
         {
           breakpoint: 768,
