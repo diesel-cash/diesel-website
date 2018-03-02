@@ -42,45 +42,7 @@ h6{
 .theme-color{
 	color: $theme-color;
 }
-.section-main{
-	background-repeat: no-repeat;
-    background-position: center top;
-    background-image: url(../../assets/images/body-2.png);
-}
-.title-main{
-	background-image: url(../../assets/images/line.png);
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	padding-bottom: 160px;    
-	padding-top: 80px;
-}
-.content_column_3{
-	.column_1{
-		background-color: #121038;
-	    padding: 50px 50px 35px;
-	    border-radius: 30px;
-	}
-	.column_2{
-		background-color: #121038;
-		background-image: url('../../assets/images/columnbg.png');
-		background-repeat: no-repeat;
-	    background-position: center;
-	    padding: 50px 50px 35px;
-	    border-radius: 30px;
-	}
-	ul {
-		padding: 0;
-    	list-style: none;
-    	margin: 0;
-		li{
-			background-image: url(../../assets/images/agree.png);
-		    background-repeat: no-repeat;
-		    background-position: 0px 4px;
-		    padding-left: 30px;
-	    	margin-bottom: 10px;
-	    }
-	}
-}
+
 /* slider */
 ul.slick-dots{
 	li {
@@ -94,6 +56,25 @@ ul.slick-dots{
 			opacity: 1;
 		}
 	}	
+}
+/* List */
+.list-image{
+	>*{
+		background-image: url(../../assets/images/agree.png);
+		background-repeat: no-repeat;
+		background-position: 0px 4px;
+		padding-left: 30px;
+	}
+}
+/* Box Number */
+.box-number{
+	position: relative;
+	span{
+		position: absolute;
+	    top: 17px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	}
 }
 /* == Box == */
 .box-radius{
